@@ -93,15 +93,26 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Service1.svc" />
+    <Content Include="WcfService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessLog.cs" />
+    <Compile Include="Card.cs" />
     <Compile Include="DataHelper.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="DoorAccess.cs" />
+    <Compile Include="EditCard.cs" />
+    <Compile Include="EditDoor.cs" />
+    <Compile Include="IWcfService.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WcfService.svc.cs">
+      <DependentUpon>WcfService.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
