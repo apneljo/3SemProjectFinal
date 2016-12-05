@@ -23,7 +23,40 @@ namespace DoorWcf
             UriTemplate = "GetLogList/")]
         List<AccessLog> AccessLogs();
 
-      
-        
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "AddCard/")]
+        bool AddCard(Card composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "DeleteCard/")]
+        bool DeleteCard(Card composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "AddDoor/")]
+        bool AddDoor(Door composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "GetDoorList/")]
+        List<Door> DoorList();
+
+        [OperationContract]
+        [WebInvoke(Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "DeleteDoor/")]
+        bool DeleteDoor(Door composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "EditCard/")]
+        bool UpdateCard(EditCard composite);
+
+        [OperationContract]
+        [WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "EditDoor/")]
+        bool UpdateDoor(EditDoor composite);
+
     }
 }

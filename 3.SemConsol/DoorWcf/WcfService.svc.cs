@@ -16,6 +16,41 @@ namespace DoorWcf
             return DataHelper.LogList();
         }
 
+        public bool AddCard(Card composite)
+        {
+            return DataHelper.addCard(composite);
+        }
+
+        public bool DeleteCard(Card composite)
+        {
+            return DataHelper.DeleteCard(composite);
+        }
+
+        public bool AddDoor(Door composite)
+        {
+            return DataHelper.addDoor(composite);
+        }
+
+        public List<Door> DoorList()
+        {
+            return DataHelper.Doors();
+        }
+
+        public bool DeleteDoor(Door composite)
+        {
+            return DataHelper.DeleteDoor(composite);
+        }
+
+        public bool UpdateCard(EditCard composite)
+        {
+            return DataHelper.EditCard(composite);
+        }
+
+        public bool UpdateDoor(EditDoor composite)
+        {
+            return DataHelper.EditDoor(composite);
+        }
+
         public List<Card> CardList()
         {
             return DataHelper.Cards();

@@ -18,6 +18,15 @@ namespace DoorWcf
             set { _cardId = value; }
         }
 
+        public Card(string cardId)
+        {
+            _cardId = cardId;
+        }
+
+        public Card()
+        {
+            
+        }
         public override bool Equals(object obj)
         {
             if (obj.GetType() != typeof(Card))
