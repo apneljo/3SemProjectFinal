@@ -65,6 +65,16 @@ namespace DoorWcf
             return DataHelper.AddDoorAccess(composite);
         }
 
+        public List<DoorAccess> Accesslist()
+        {
+            return DataHelper.AccessList();
+        }
+
+        public bool UpdateDoor(DoorAccess composite)
+        {
+            return DataHelper.DeleteDoorAccess(composite);
+        }
+
         public List<Card> CardList()
         {
             return DataHelper.Cards();

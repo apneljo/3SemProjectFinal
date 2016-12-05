@@ -73,5 +73,14 @@ namespace DoorWcf
              UriTemplate = "AddDoorAccess/")]
         bool AddDoorAccess(DoorAccess composite);
 
+        [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "GetAccessList/")]
+        List<DoorAccess> Accesslist();
+
+        [OperationContract]
+        [WebInvoke(Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "DeleteDoorAccess/")]
+        bool UpdateDoor(DoorAccess composite);
     }
 }

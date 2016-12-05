@@ -228,9 +228,8 @@ namespace DoorWcf
                 using (SqlCommand cmd = new SqlCommand())
                 {
                     connectionstring.Open();
-                    cmd.CommandText = "DELETE FROM DoorAccess WHERE CardID = @p1 and DoorID = @p2";
+                    cmd.CommandText = "DELETE FROM DoorAccess WHERE CardID = @p1";
                     cmd.Parameters.AddWithValue("@p1", composite.CardId);
-                    cmd.Parameters.AddWithValue("@p2", composite.DoorId);
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = connectionstring;
 
