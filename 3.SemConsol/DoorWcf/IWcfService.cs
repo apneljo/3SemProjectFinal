@@ -58,5 +58,20 @@ namespace DoorWcf
              UriTemplate = "EditDoor/")]
         bool UpdateDoor(EditDoor composite);
 
+        [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "GetLogByDoor/")]
+        List<AccessLog> LogbyDoor(string dooriD);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "GetLogByCard/")]
+        List<AccessLog> LogbyCard(string cardiD);
+
+        [OperationContract]
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "AddDoorAccess/")]
+        bool AddDoorAccess(DoorAccess composite);
+
     }
 }

@@ -51,6 +51,20 @@ namespace DoorWcf
             return DataHelper.EditDoor(composite);
         }
 
+        public List<AccessLog> LogbyDoor(string dooriD)
+        {
+            return DataHelper.LogListOnDoorId(dooriD);
+        }
+        public List<AccessLog> LogbyCard(string cardiD)
+        {
+            return DataHelper.LogListOnCardId(cardiD);
+        }
+
+        public bool AddDoorAccess(DoorAccess composite)
+        {
+            return DataHelper.AddDoorAccess(composite);
+        }
+
         public List<Card> CardList()
         {
             return DataHelper.Cards();
