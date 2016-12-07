@@ -60,12 +60,12 @@ namespace DoorWcf
 
         [OperationContract]
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
-             UriTemplate = "GetLogByDoor/")]
+             UriTemplate = "GetLogByDoor/{dooriD}")]
         List<AccessLog> LogbyDoor(string dooriD);
 
         [OperationContract]
         [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
-             UriTemplate = "GetLogByCard/")]
+             UriTemplate = "GetLogByCard/{cardiD}")]
         List<AccessLog> LogbyCard(string cardiD);
 
         [OperationContract]
@@ -81,6 +81,6 @@ namespace DoorWcf
         [OperationContract]
         [WebInvoke(Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
              UriTemplate = "DeleteDoorAccess/")]
-        bool UpdateDoor(DoorAccess composite);
+        bool DeleteDoorAccess(DoorAccess composite);
     }
 }

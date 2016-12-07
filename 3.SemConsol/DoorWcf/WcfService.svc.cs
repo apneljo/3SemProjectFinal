@@ -70,7 +70,7 @@ namespace DoorWcf
             return DataHelper.AccessList();
         }
 
-        public bool UpdateDoor(DoorAccess composite)
+        public bool DeleteDoorAccess(DoorAccess composite)
         {
             return DataHelper.DeleteDoorAccess(composite);
         }
